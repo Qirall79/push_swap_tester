@@ -1,4 +1,3 @@
-
 ### Usage
 
 - Clone the repo
