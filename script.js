@@ -25,7 +25,7 @@ const generateUniqueRandomNumbers = (count, min, max) => {
 	const uniqueRandomNumbers = generateUniqueRandomNumbers(NUMBERS_AMOUNT, RANGE_MIN, RANGE_MAX);
 	const numbers = uniqueRandomNumbers.join(' ');
   
-	exec(`${EXECUTABLE_PATH} ${numbers} > moves && cat moves | ${CHECKER_PATH} ${numbers}`, (error, stdout, stderr) => {
+	exec(`echo ${numbers} > numbers; ${EXECUTABLE_PATH} ${numbers} > moves && cat moves | ${CHECKER_PATH} ${numbers}`, (error, stdout, stderr) => {
 	  
 	  
   
